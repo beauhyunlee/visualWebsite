@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Text Editor</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="initiateDocs();">
+    <form name="compForm" method="post">
+    <input type="hidden" name="myDoc">
+    <div id="toolBar1">
+    <select onchange="formatType('fontsize',this[this.selectedIndex].value);this.selectedIndex=0;">
+        <option class="heading" selected>SELECT</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+    <img src="bold-text.png" width="10" height="10" onclick="formatType('bold');" />
+    <img src="italic.png" width="10" height="10" onclick="formatType('italic');" />
+    <img src="underline.png" width="10" height="10" onclick="formatType('underline');" />
+    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display:none;">
+    <label for="file" style="cursor: pointer;">Add Image</label>
+    </div>
+        <div id="textBox" contenteditable="true"><p></p></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.intLink { cursor: pointer; }
+
+img.intLink { border: 0; }
+
+#toolBar1 select { font-size:10px; }
+
+#textBox {
+  width: 100%;
+  height: 200px;
+  padding: 12px;
+  margin-top: 5px;
+}
